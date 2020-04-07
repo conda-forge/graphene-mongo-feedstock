@@ -1,5 +1,5 @@
 {% set name = "graphene-mongo" %}
-{% set version = "0.2.11" %}
+{% set version = "0.2.12" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 2e5974f5f9a4228764e1f5a3f78c411fc97f7f76cee74bb144f6e93308fc212d
+  sha256: cd56a38289775236f58d775860497e3d6bdcf3dc7631d41a35eeade7b21f35ee
 
 build:
   number: 0
