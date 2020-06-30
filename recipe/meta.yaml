@@ -1,17 +1,17 @@
 {% set name = "graphene-mongo" %}
-{% set version = "0.2.12" %}
+{% set version = "0.2.13" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: cd56a38289775236f58d775860497e3d6bdcf3dc7631d41a35eeade7b21f35ee
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 83a9380bc0121fcefe9358155ef6b1e778b0673027e4fa78364a9366ae6ee92b
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -30,14 +30,14 @@ test:
     - graphene_mongo
 
 about:
-  home: "https://github.com/graphql-python/graphene-mongo"
+  home: https://github.com/graphql-python/graphene-mongo
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Graphene Mongoengine integration"
+  summary: Graphene Mongoengine integration
   doc_url: https://graphene-mongo.readthedocs.io/en/latest/
   dev_url: https://github.com/graphql-python/graphene-mongo
-  description: "A Mongoengine integration for Graphene."
+  description: A Mongoengine integration for Graphene.
 
 extra:
   recipe-maintainers:
