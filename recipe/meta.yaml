@@ -1,5 +1,5 @@
 {% set name = "graphene-mongo" %}
-{% set version = "0.2.14" %}
+{% set version = "0.2.16" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ source:
   sha256: 30caca1c9a01b463f1127345c902d30197ec2cd5eb6d9a002f9ff77685960dbd
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
@@ -20,11 +20,11 @@ requirements:
     - python {{ python_min }}
   run:
     - python >={{ python_min }}
-    - graphene ==3.0b7
+    - graphene ==3.1.1
     - promise ==2.3
-    - future ==0.18.2
-    - mongoengine ==0.23.0
-    - singledispatch ==3.6.1
+    - future ==0.18.3
+    - mongoengine ==0.27
+    - singledispatch ==3.7.0
 
 test:
   requires:
