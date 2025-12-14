@@ -1,5 +1,5 @@
 {% set name = "graphene-mongo" %}
-{% set version = "0.2.14" %}
+{% set version = "0.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 30caca1c9a01b463f1127345c902d30197ec2cd5eb6d9a002f9ff77685960dbd
+  sha256: 54da09ab45880e118ac1be1a059dc23cbb3e1398e1a696c808abb2a2c463645b
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
@@ -20,11 +20,11 @@ requirements:
     - python {{ python_min }}
   run:
     - python >={{ python_min }}
-    - graphene ==3.0b7
-    - promise ==2.3
-    - future ==0.18.2
-    - mongoengine ==0.23.0
-    - singledispatch ==3.6.1
+    - graphene >=3.1.1
+    - graphene-federation >=3.1.5
+    - promise >=2.3
+    - mongoengine >=0.27
+    - asgiref >=3.7.2
 
 test:
   requires:
