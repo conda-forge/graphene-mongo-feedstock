@@ -8,7 +8,7 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/graphene_mongo-{{ version }}.tar.gz
   sha256: 54da09ab45880e118ac1be1a059dc23cbb3e1398e1a696c808abb2a2c463645b
-https://files.pythonhosted.org/packages/57/3f/9df8f5a678a3758dee9123e14ce6938912951634cd65d6626ce10f27620f/graphene_mongo-0.4.4.tar.gz
+
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
