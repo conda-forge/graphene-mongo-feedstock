@@ -1,0 +1,48 @@
+schema_version: 1
+
+context:
+  name: graphene-mongo
+  version: 0.4.4
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/graphene_mongo-${{ version }}.tar.gz
+  sha256: 54da09ab45880e118ac1be1a059dc23cbb3e1398e1a696c808abb2a2c463645b
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python >=${{ python_min }}.*,<4.0
+    - poetry-core
+    - pip
+  run:
+    - python >=${{ python_min }},<4.0
+    - graphene >=3.1.1
+    - graphene-federation >=3.1.5
+    - promise >=2.3
+    - mongoengine >=0.27
+    - asgiref >=3.7.2,<4.0.0
+
+tests:
+  - python:
+      python_version: ${{ python_min }}.*
+      imports:
+        - graphene_mongo
+      pip_check: true
+
+about:
+  summary: Graphene Mongoengine integration
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/graphql-python/graphene-mongo
+
+extra:
+  recipe-maintainers:
+    - KingDarBoja
