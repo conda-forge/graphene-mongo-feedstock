@@ -9,12 +9,6 @@ Package license: MIT
 
 Summary: Graphene Mongoengine integration
 
-Development: https://github.com/graphql-python/graphene-mongo
-
-Documentation: https://graphene-mongo.readthedocs.io/en/latest/
-
-A Mongoengine integration for Graphene.
-
 Current build status
 ====================
 
